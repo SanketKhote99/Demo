@@ -1,4 +1,5 @@
 import { IsOptional } from "class-validator";
+import { Book } from "src/book/book.entity";
 
 
 export class CreateCategoryDto{
@@ -8,5 +9,8 @@ export class CreateCategoryDto{
 
     @IsOptional()
     category;
+
+    @IsOptional()
+    books: Book[];
 
 }

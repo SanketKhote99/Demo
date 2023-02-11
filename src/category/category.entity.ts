@@ -6,11 +6,11 @@ export class Category {
 
     @PrimaryGeneratedColumn()
     id: number;
-
+    
     @Column()
     category: string;
 
+    @OneToMany(() => Book, book => book.category)
+    books: Book[];
     
-    
-
 }

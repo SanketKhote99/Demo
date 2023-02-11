@@ -12,7 +12,7 @@ export class Book{
     @Column()
     title : string;
 
-    @ManyToOne(() => Author, author => author.books)
+    @ManyToOne(() => Author)
     @JoinColumn({name:"author"})
     author : Author;
 

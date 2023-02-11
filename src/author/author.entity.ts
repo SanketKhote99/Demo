@@ -1,5 +1,5 @@
 import { Book } from "src/book/book.entity";
-import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Author {
@@ -10,7 +10,6 @@ export class Author {
     @Column()
     name: string;
 
-    @OneToMany(type => Book, book => book.author)
-    @JoinColumn()
+    @OneToMany(() => Book, book => book.author)
     books: Book[];
 }
