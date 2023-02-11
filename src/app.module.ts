@@ -17,10 +17,10 @@ import { Category } from './category/category.entity';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 3307,
+      port: 3306,
       username: 'root',
-      password: 'Pass',
-      database: 'nestpro',
+      password: 'password',
+      database: 'sanket',
       entities: [Author,Book,Category],
       synchronize: true,
     }),
