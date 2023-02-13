@@ -16,17 +16,17 @@ export class BookController {
   }
 
   @Get(':id')
-  findById(@Param("id") id: string) {
+  findById(@Param("id") id: number) {
     return this.bookService.findById(id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() createbookDto: CreateBookDto) {
+  update(@Param('id') id: number, @Body() createbookDto: CreateBookDto) {
     return this.bookService.update(id, createbookDto);
   }
 
   @Delete(':id')
-  deleteById(@Param("id") id: string) {
+  deleteById(@Param("id") id: number) {
     return this.bookService.remove(id);
   }
 

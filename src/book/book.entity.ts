@@ -7,7 +7,7 @@ import { Column, Entity,  JoinColumn,  ManyToOne, PrimaryGeneratedColumn } from 
 export class Book{
 
     @PrimaryGeneratedColumn()
-    id : string;
+    id : number;
 
     @Column()
     title : string;
