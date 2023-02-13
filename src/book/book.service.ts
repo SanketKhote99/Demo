@@ -19,8 +19,9 @@ export class BookService {
 
 
     async findAll(): Promise<Book[]> {
-        return await this.bookRepository.find();
+        return await this.bookRepository.find({select:{author:{name:true}, category:{category:true}},relations: [  'author','category']});
     }
+
 
     async findById(id: string): Promise<Book> {
         return await this.bookRepository.findOneBy({ id });
